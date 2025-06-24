@@ -1,0 +1,76 @@
+{
+  "personId": "person-001",
+  "avatarUrl": "https://example.com/avatar.jpg",
+  "headShotUrl": "https://example.com/headshot.jpg",
+  "biography": "Experienced software engineer with a passion for building scalable systems.",
+  "preferredName": "Steve",
+  "type": "EMPLOYEE",
+  "firstName": "Steven",
+  "middleName": "James",
+  "lastName": "Smith",
+  "birthday": "1985-04-12",
+  "addresses": [
+    {
+      "addressId": "addr-001",
+      "firstName": "Steven",
+      "lastName": "Smith",
+      "addressLine1": "123 Main St",
+      "addressLine2": "Apt 4B",
+      "city": "Springfield",
+      "stateOrProvince": "IL",
+      "postalCode": "62704",
+      "countryCode": "USA",
+      "type": "home"
+    }
+  ],
+  "phoneNumbers": [
+    {
+      "type": "mobile",
+      "countryCode": "+1",
+      "digitSequence": "5551234567"
+    }
+  ],
+  "workProfile": {
+    "workProfileId": "wp-12345",
+    "status": "ACTIVE",
+    "hireDate": "2020-01-15",
+    "separationDate": null,
+    "currentRole": "Senior Software Engineer",
+    "currentLevel": "L5",
+    "currentManagerId": "mgr-67890",
+    "currentOrganizationId": "org-001",
+    "currentPayDetails": {
+      "yearlySalary": 150000.0,
+      "yearlyEquity": 20000.0,
+      "yearlyBonusPercentage": 10.0
+    },
+    "roleHistory": [
+      {
+        "startDate": "2020-01-15",
+        "endDate": "2022-06-30",
+        "role": "Software Engineer",
+        "level": "L4",
+        "managerId": "mgr-12345",
+        "organizationId": "org-001",
+        "payDetails": {
+          "yearlySalary": 120000.0,
+          "yearlyEquity": 10000.0,
+          "yearlyBonusPercentage": 8.0
+        }
+      },
+      {
+        "startDate": "2022-07-01",
+        "endDate": null,
+        "role": "Senior Software Engineer",
+        "level": "L5",
+        "managerId": "mgr-67890",
+        "organizationId": "org-001",
+        "payDetails": {
+          "yearlySalary": 150000.0,
+          "yearlyEquity": 20000.0,
+          "yearlyBonusPercentage": 10.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/person-phone-work.schema.json",
+  "title": "Person, PhoneNumber, and WorkProfile Schema",
+  "type": "object",
+  "$defs": {
+    "Person": {
+      "type": "object",
+      "properties": {
+        "personId": {
+          "type": "string"
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "headShotUrl": {
+          "type": "string"
+        },
+        "biography": {
+          "type": "string"
+        },
+        "preferredName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Address"
+          }
+        },
+        "phoneNumbers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PhoneNumber"
+          }
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "workProfile": {
+          "$ref": "#/$defs/WorkProfile"
+        }
+      },
+      "required": [
+        "personId",
+        "firstName",
+        "middleName",
+        "lastName",
+        "addresses",
+        "type",
+        "phoneNumbers",
+        "birthday",
+        "preferredName",
+        "biography",
+        "headShotUrl",
+        "avatarUrl",
+        "workProfile"
+      ]
+    },
+    "PhoneNumber": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string"
+        },
+        "digitSequence": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "countryCode",
+        "digitSequence"
+      ]
+    },
+    "Address": {
+      "type": "object",
+      "properties": {
+        "addressId": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "addressLine1": {
+          "type": "string"
+        },
+        "addressLine2": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "stateOrProvince": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "addressId",
+        "firstName",
+        "lastName",
+        "addressLine1",
+        "addressLine2",
+        "city",
+        "stateOrProvince",
+        "postalCode",
+        "countryCode",
+        "type"
+      ]
+    },
+    "WorkProfile": {
+      "type": "object",
+      "properties": {
+        "workProfileId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "hireDate": {
+          "type": "string"
+        },
+        "separationDate": {
+          "type": "string"
+        },
+        "currentRole": {
+          "type": "string"
+        },
+        "currentLevel": {
+          "type": "string"
+        },
+        "currentManagerId": {
+          "type": "string"
+        },
+        "currentOrganizationId": {
+          "type": "string"
+        },
+        "currentPayDetails": {
+          "type": "object",
+          "properties": {
+            "yearlySalary": {
+              "type": "number"
+            },
+            "yearlyEquity": {
+              "type": "number"
+            },
+            "yearlyBonusPercentage": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "yearlySalary",
+            "yearlyEquity",
+            "yearlyBonusPercentage"
+          ]
+        },
+        "roleHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "level": {
+                "type": "string"
+              },
+              "managerId": {
+                "type": "string"
+              },
+              "organizationId": {
+                "type": "string"
+              },
+              "payDetails": {
+                "type": "object",
+                "properties": {
+                  "yearlySalary": {
+                    "type": "number"
+                  },
+                  "yearlyEquity": {
+                    "type": "number"
+                  },
+                  "yearlyBonusPercentage": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "yearlySalary",
+                  "yearlyEquity",
+                  "yearlyBonusPercentage"
+                ]
+              }
+            },
+            "required": [
+              "startDate",
+              "endDate",
+              "role",
+              "level",
+              "managerId",
+              "organizationId",
+              "payDetails"
+            ]
+          }
+        }
+      },
+      "required": [
+        "workProfileId",
+        "status",
+        "hireDate",
+        "separationDate",
+        "currentRole",
+        "currentLevel",
+        "currentManagerId",
+        "roleHistory",
+        "currentOrganizationId",
+        "currentPayDetails"
+      ]
+    }
+  }
+}
